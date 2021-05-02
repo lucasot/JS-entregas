@@ -1,7 +1,6 @@
 // REALICE UNA CALCULADORA LA CUAL EL USUARIO INGRESA SUS PROPIOS DATOS
 
 // SALUDANDO AL USUARIO
-
 function saludar() {
     let nombre = prompt("Hola porfavor ingrese su nombre");
     document.write("Hola "+ nombre +"</br>");
@@ -63,10 +62,7 @@ function mostrar(mensaje) {
     console.log(mensaje);
 }
 
-
 /* 
-
-
 // REALICE UN PRONOSTICO DEL CLIMA MUY BASICO
 
 let entrada = prompt("Por favor ingrese un dia de la semana todo en mayusculas: ");
@@ -99,6 +95,4 @@ while(entrada!= "ESC"){
     }
 entrada = prompt("Ingrese un dia de la semana y si decia salir escriba ESC");
 }
-
 */ 
-
