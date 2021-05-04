@@ -49,18 +49,19 @@ function calculadora(numero1, numero2,operacion) {
         }
     document.write("El resultado es " + r + "</br>");
 }
-// FUNCION MENSAJE 
+// FUNCION MOSTRAR MENSAJE 
+var entrada;
 
 function mostrar() {
-    let mensaje = prompt("Ingrese otra operacion y si desea salir escriba ESC");
-    if (mensaje == "ESC"){
-        alert("Chau hasta luego, puede volver cuando guste");
-    }
+    let entrada = prompt('Para usar la calculadora presione ENTER, para salir escriba ESC')
 }
+mostrar();
 
-// LLAMANDO A LA FUNCION CALCULADORA
-while(calculadora() != "ESC") {
-    mostrar(); 
+// LLAMANDO A FUNCION CALCULADORA
+
+while (entrada != "ESC") {
+    calculadora()
+entrada = prompt("Para seguir realizando operaciones presione ENTER, para ver los resultados escriba ESC");
 }
 
 
