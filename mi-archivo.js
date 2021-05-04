@@ -11,56 +11,59 @@ saludar();
 
 var numero1;
 var numero2;
-
+  
 function calculadora(numero1, numero2,operacion) {
     
+    // DECLARANDO VARIABLES
+    var numero1 = parseInt(prompt("Ingrese el primer numero"));
+    var numero2 = parseInt(prompt("Ingrese el segundo numero"));
+    var operacion =prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
+    var r;
+    // LECTURA DE TEXTO EN PANTALLA
+    document.write("Usted ingreso como primer numero: " + numero1+"</br>");
+    document.write("Usted ingreso como segundo numero: " + numero2+"</br>");
+    document.write("Usted ingreso la operacion: "+ operacion+"</br>");
 
-        // DECLARANDO VARIABLES
-        var numero1 = parseInt(prompt("Ingrese el primer numero"));
-        var numero2 = parseInt(prompt("Ingrese el segundo numero"));
-        var operacion =prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
-        var r;
-        // LECTURA DE TEXTO EN PANTALLA
-        document.write("Usted ingreso como primer numero: " + numero1+"</br>");
-        document.write("Usted ingreso como segundo numero: " + numero2+"</br>");
-        document.write("Usted ingreso la operacion: "+ operacion+"</br>");
+        // SWITCH CALCULADORA
+        switch(operacion) {
+            case "+":
+                r = numero1 + numero2;
+                break;
+        }
+        switch(operacion){
+            case "-":
+                r = numero1 - numero2;
+                break;
+        }
+        switch(operacion){
+            case "*":
+                r = numero1 * numero2;
+                break;
+        }
+        switch(operacion){
+            case "/":
+                r = numero1 / numero2;
+                break;
+        default:
+            break;
+        }
+    document.write("El resultado es " + r + "</br>");
+}
+// FUNCION MENSAJE 
 
-        // while(operacion != "ESC") {
-
-            // SWITCH CALCULADORA
-                switch(operacion) {
-                    case "+":
-                        r = numero1 + numero2;
-                        break;
-                }
-                switch(operacion){
-                    case "-":
-                        r = numero1 - numero2;
-                        break;
-                }
-                switch(operacion){
-                    case "*":
-                        r = numero1 * numero2;
-                        break;
-                }
-                switch(operacion){
-                    case "/":
-                        r = numero1 / numero2;
-                        break;
-                default:
-                    break;
-                }
-                document.write("El resultado es " + r + "</br>");
-
-        // operacion = prompt("Ingrese otra operacion y si decia salir escriba ESC");
+function mostrar() {
+    let mensaje = prompt("Ingrese otra operacion y si desea salir escriba ESC");
+    if (mensaje == "ESC"){
+        alert("Chau hasta luego, puede volver cuando guste");
+    }
 }
 
 // LLAMANDO A LA FUNCION CALCULADORA
-calculadora();
-
-function mostrar(mensaje) {
-    console.log(mensaje);
+while(calculadora() != "ESC") {
+    mostrar(); 
 }
+
+
 
 /* 
 // REALICE UN PRONOSTICO DEL CLIMA MUY BASICO
