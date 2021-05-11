@@ -9,46 +9,85 @@ function saludar() {
 }
 saludar();
 
+// const listaNumeros = [];
+// let cantidad = 5;
+
+// // BUCLE DEL ARRAY
+
+// do{
+//     let numero = prompt("Ingrese un numero");
+//     listaNumeros.push(numero);
+//     console.log(listaNumeros.length);
+
+// }while(listaNumeros.length != cantidad);
+
+// for (n in listaNumeros) {
+//     numero = listaNumeros[n] + "<br>";
+//     document.write(numero  + "<br>");
+// }
+
 var numero1;
 var numero2;
   
-function calculadora(numero1, numero2,operacion) {
-    
-    // DECLARANDO VARIABLES
-    var numero1 = parseInt(prompt("Ingrese el primer numero"));
-    var numero2 = parseInt(prompt("Ingrese el segundo numero"));
-    var operacion =prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
-    var r;
-    // LECTURA DE TEXTO EN PANTALLA
-    document.write("Usted ingreso como primer numero: " + numero1+"</br>");
-    document.write("Usted ingreso como segundo numero: " + numero2+"</br>");
-    document.write("Usted ingreso la operacion: "+ operacion+"</br>");
+class cientifica{
 
-        // SWITCH CALCULADORA
-        switch(operacion) {
-            case "+":
-                r = numero1 + numero2;
-                break;
+    constructor(pi ,  iva){
+
+        this.pi = pi(3,1416);
+        this.iva = iva(1.21);
+
+        function calculadora (numero1,numero2,operacion) {
+        
+            // DECLARANDO VARIABLES
+            var numero1 = parseInt(prompt("Ingrese el primer numero"));
+            var numero2 = parseInt(prompt("Ingrese el segundo numero"));
+            var operacion = prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
+            var r;
+            // LECTURA DE TEXTO EN PANTALLA
+            document.write("Usted infreso como primero numero: " + numero1 +"</br>");
+            document.write("Usted ingreso como segundo numero: " + numero2+"</br>");
+            document.write("Usted ingreso la operacion: "+ operacion+"</br>");
+
+                // SWITCH CALCULADORA
+                switch(operacion) {
+                    case "+":
+                        r = numero1 + numero2;
+                        break;
+                }
+                switch(operacion){
+                    case "-":
+                        r = numero1 - numero2;
+                        break;
+                }
+                switch(operacion){
+                    case "*":
+                        r = numero1 * numero2;
+                        break;
+                }
+                switch(operacion){
+                    case "/":
+                        r = numero1 / numero2;
+                        break;
+                default:
+                    break;
+                }
+            document.write("El resultado es " + r + "</br>");
         }
-        switch(operacion){
-            case "-":
-                r = numero1 - numero2;
-                break;
-        }
-        switch(operacion){
-            case "*":
-                r = numero1 * numero2;
-                break;
-        }
-        switch(operacion){
-            case "/":
-                r = numero1 / numero2;
-                break;
-        default:
-            break;
-        }
-    document.write("El resultado es " + r + "</br>");
+    }
+    sumaIva() {
+        this.iva = this.iva * r;
+    }
+    sumaPi() {
+        this.pi = this.pi * r;
+    }
+
+
+document.write("El resultado con IVA es " + sumaIva() + "</br>");
+
+document.write("El resultado multiplicado por pi es " + sumaPi() + "</br>");
+
 }
+
 // FUNCION MOSTRAR MENSAJE 
 var entrada;
 
@@ -63,8 +102,6 @@ while (entrada != "ESC") {
     calculadora()
 entrada = prompt("Para seguir realizando operaciones presione ENTER, para ver los resultados escriba ESC");
 }
-
-
 
 /* 
 // REALICE UN PRONOSTICO DEL CLIMA MUY BASICO
