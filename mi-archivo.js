@@ -86,6 +86,7 @@ function mostrar() {
 mostrar();
 
 // LLAMANDO A FUNCION CALCULADORA
+
 var calculadora1 = new Cientifica(); // aca llamas a la class para aplicarles sus respectivos metodos.
 
 // WHILE PARA SEGUIR OPERANDO 
@@ -95,6 +96,7 @@ while (entrada != "ESC") {
 }
 
 // FUNCIONES IVA Y PI
+
 calculadora1.sumaIva();
 document.write("El resultado con IVA es: " + calculadora1.iva + "</br>");
 calculadora1.sumaPi();
@@ -213,3 +215,4 @@ while(entrada!= "ESC"){
 entrada = prompt("Ingrese un dia de la semana y si decia salir escriba ESC");
 }
 */
+
