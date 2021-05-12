@@ -3,29 +3,105 @@
 // SALUDANDO AL USUARIO
 function saludar() {
     let nombre = prompt("Hola porfavor ingrese su nombre");
-    document.write("Hola "+ nombre +"</br>");
-    alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA") 
+    document.write("Hola " + nombre + "</br>");
+    alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA")
     return
 }
 saludar();
 
-// const listaNumeros = [];
-// let cantidad = 5;
+/*
+const listaNumeros = [];
+let cantidad = 5;
 
-// // BUCLE DEL ARRAY
+// BUCLE DEL ARRAY
 
-// do{
-//     let numero = prompt("Ingrese un numero");
-//     listaNumeros.push(numero);
-//     console.log(listaNumeros.length);
+ do{
+     let numero = prompt("Ingrese un numero");
+     listaNumeros.push(numero);
+    console.log(listaNumeros.length);
 
-// }while(listaNumeros.length != cantidad);
+}while(listaNumeros.length != cantidad);
 
-// for (n in listaNumeros) {
-//     numero = listaNumeros[n] + "<br>";
-//     document.write(numero  + "<br>");
-// }
+for (n in listaNumeros) {
+    numero = listaNumeros[n] + "<br>";
+    document.write(numero  + "<br>");
+}
+*/
 
+
+class Cientifica { //La class se declara siempre con la primera mayuscula.     
+
+    constructor() {
+        this.pi = 3.1416;
+        this.iva = 1.21;
+        this.r = Number;
+    }
+    sumaIva() {
+        this.iva = this.iva * this.r;
+    }
+
+    sumaPi() {
+        this.pi = this.pi * this.r;
+    }
+
+    calculadora() {
+
+        // DECLARANDO VARIABLES
+
+        var numero1 = parseInt(prompt("Ingrese el primer numero"));
+        var numero2 = parseInt(prompt("Ingrese el segundo numero"));
+        var operacion = prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
+        // LECTURA DE TEXTO EN PANTALLA
+
+        document.write("Usted ingreso como primer numero: " + numero1 + "</br>");
+        document.write("Usted ingreso como segundo numero: " + numero2 + "</br>");
+        document.write("Usted ingreso la operacion: " + operacion + "</br>");
+
+        // SWITCH CALCULADORA
+        switch (operacion) {
+            case "+":
+                this.r = numero1 + numero2;
+                break;
+            case "-":
+                this.r = numero1 - numero2;
+                break;
+            case "*":
+                this.r = numero1 * numero2;
+                break;
+            case "/":
+                this.r = numero1 / numero2;
+                break;
+            default:
+                break;
+        }
+        document.write("El resultado es " + this.r + "</br>");
+    }
+}
+// FUNCION MOSTRAR MENSAJE 
+var entrada;
+
+function mostrar() {
+    entrada = prompt('Para usar la calculadora presione ENTER, para salir escriba ESC')
+}
+mostrar();
+
+// LLAMANDO A FUNCION CALCULADORA
+var calculadora1 = new Cientifica(); // aca llamas a la class para aplicarles sus respectivos metodos.
+
+// WHILE PARA SEGUIR OPERANDO 
+while (entrada != "ESC") {
+    calculadora1.calculadora();
+    entrada = prompt("Para seguir realizando operaciones presione ENTER, para ver los resultados escriba ESC");
+}
+
+// FUNCIONES IVA Y PI
+calculadora1.sumaIva();
+document.write("El resultado con IVA es: " + calculadora1.iva + "</br>");
+calculadora1.sumaPi();
+document.write("El resultado multiplicado por pi es: " + calculadora1.pi + "</br>");
+
+
+/*
 var numero1;
 var numero2;
   
@@ -136,4 +212,4 @@ while(entrada!= "ESC"){
     }
 entrada = prompt("Ingrese un dia de la semana y si decia salir escriba ESC");
 }
-*/ 
+*/
