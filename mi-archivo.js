@@ -8,6 +8,7 @@ saludar();
 
 const n1 = [];
 const n2 = [];
+const resultados = [];
 
 let cantidad = 5;
 
@@ -25,6 +26,7 @@ class Cientifica {
     sumaPi() {
         this.pi = this.pi * this.r;
     }
+    
 
     calculadora() {
 
@@ -58,6 +60,7 @@ class Cientifica {
                 break;
         }
         document.write("El resultado es " + this.r + "</br>");
+        resultados.push[this.r];
     }
 }
 
@@ -69,7 +72,7 @@ function mostrar() {
 mostrar();
 
 
-var calculadora1 = new Cientifica(); // aca llamas a la class para aplicarles sus respectivos metodos.
+var calculadora1 = new Cientifica();
 
 while (entrada != "ESC" || entrada != "esc" ||  entrada != "Esc") { // no me funciona el while!!!
     calculadora1.calculadora();
