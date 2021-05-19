@@ -26,17 +26,17 @@ class Cientifica {
     sumaPi() {
         this.pi = this.pi * this.r;
     }
-    
+
 
     calculadora() {
 
         
         let numero1 = parseInt(prompt("Ingrese el primer numero"));
         n1.push(numero1);
-        console.log(n1.length);
+        console.log(n1);
         let numero2 = parseInt(prompt("Ingrese el segundo numero"));
         n2.push(numero2);
-        console.log(n2.length);
+        console.log(n2);
         var operacion = prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
 
         document.write("Usted ingreso como primer numero: " + numero1 + "</br>");
@@ -61,6 +61,7 @@ class Cientifica {
         }
         document.write("El resultado es " + this.r + "</br>");
         resultados.push[this.r];
+        console.log(resultados);
     }
 }
 
@@ -74,7 +75,7 @@ mostrar();
 
 var calculadora1 = new Cientifica();
 
-while (entrada != "ESC" || entrada != "esc" ||  entrada != "Esc") { // no me funciona el while!!!
+while (entrada != "ESC") { // || entrada != "esc" ||  entrada != "Esc") // no me funciona el while!!!
     calculadora1.calculadora();
     entrada = prompt("Para seguir realizando operaciones presione ENTER, para ver los resultados escriba ESC");
 }
