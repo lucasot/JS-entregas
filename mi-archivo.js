@@ -6,25 +6,10 @@ function saludar() {
 }
 saludar();
 
-/*
-const listaNumeros = [];
+const n1 = [];
+const n2 = [];
+
 let cantidad = 5;
-
-// BUCLE DEL ARRAY
-
- do{
-     let numero = prompt("Ingrese un numero");
-     listaNumeros.push(numero);
-    console.log(listaNumeros.length);
-
-}while(listaNumeros.length != cantidad);
-
-for (n in listaNumeros) {
-    numero = listaNumeros[n] + "<br>";
-    document.write(numero  + "<br>");
-}
-*/
-
 
 class Cientifica {   
 
@@ -43,15 +28,19 @@ class Cientifica {
 
     calculadora() {
 
-
-        var numero1 = parseInt(prompt("Ingrese el primer numero"));
-        var numero2 = parseInt(prompt("Ingrese el segundo numero"));
+        
+        let numero1 = parseInt(prompt("Ingrese el primer numero"));
+        n1.push(numero1);
+        console.log(n1.length);
+        let numero2 = parseInt(prompt("Ingrese el segundo numero"));
+        n2.push(numero2);
+        console.log(n2.length);
         var operacion = prompt("Ingrese la operacion que desea realizar:(+,-,*,/)");
 
         document.write("Usted ingreso como primer numero: " + numero1 + "</br>");
         document.write("Usted ingreso como segundo numero: " + numero2 + "</br>");
         document.write("Usted ingreso la operacion: " + operacion + "</br>");
-
+        
         switch (operacion) {
             case "+":
                 this.r = numero1 + numero2;
@@ -82,7 +71,7 @@ mostrar();
 
 var calculadora1 = new Cientifica(); // aca llamas a la class para aplicarles sus respectivos metodos.
 
-while (entrada != "ESC") {
+while (entrada != "ESC" || entrada != "esc" ||  entrada != "Esc") { // no me funciona el while!!!
     calculadora1.calculadora();
     entrada = prompt("Para seguir realizando operaciones presione ENTER, para ver los resultados escriba ESC");
 }
