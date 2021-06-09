@@ -16,16 +16,23 @@ botonesOperadores.forEach(boton => {
 });
 
 /*Funcion saludar al usuario*/
-function saludar() {
-    let nombre = prompt("Hola porfavor ingrese su nombre");
-    alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA")
-    return
-}
-saludar();
+$(function(){
+    let nombre = prompt("Hola por favor ingrese su nombre");
+    alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA");
+});
+// function saludar() {
+//     let nombre = prompt("Hola porfavor ingrese su nombre");
+//     alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA")
+//     return
+// }
+// saludar();
 
 /* Funcion Mostrar Mensaje de entrada */
-function mostrar() {
+$(function(){
     entrada = prompt('Para entrar a la calculadora precione ENTER')
-}
-mostrar();
+});
+// function mostrar() {
+//     entrada = prompt('Para entrar a la calculadora precione ENTER')
+// }
+// mostrar();
 
