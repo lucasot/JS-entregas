@@ -5,6 +5,7 @@ const botonesNumeros = document.querySelectorAll('.num');
 const botonesOperadores = document.querySelectorAll('.operador');
 const pantalla = new Pantalla (pantallaValorAnterior, pantallaValorActual);
 var entrada;
+const URLGET= "https://jsonplaceholder.typicode.com/posts"
 
 /*Funcion botones*/
 botonesNumeros.forEach(boton => {
@@ -20,19 +21,13 @@ $(function(){
     let nombre = prompt("Hola por favor ingrese su nombre");
     alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA");
 });
-// function saludar() {
-//     let nombre = prompt("Hola porfavor ingrese su nombre");
-//     alert("BIENVENIDO/A " + nombre + " A MI CALCULADORA")
-//     return
-// }
-// saludar();
-
 /* Funcion Mostrar Mensaje de entrada */
 $(function(){
-    entrada = prompt('Para entrar a la calculadora precione ENTER')
+    entrada = prompt('Para entrar a la calculadora precione ENTER');
 });
-// function mostrar() {
-//     entrada = prompt('Para entrar a la calculadora precione ENTER')
-// }
-// mostrar();
 
+$(document).ready(function(){
+    $('#toggle').click(function(){
+        $('.calculadora').slideToggle(1000);
+    });
+});
