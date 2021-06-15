@@ -127,4 +127,23 @@ footer{
     align-content: center;
 }
 
+.botonmagico button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 45%;
+    padding: 0;
+    border: 1px black solid;
+    font-size: 1.4em;
+    background-color: rgba(197, 197, 197, 0.904);
+    box-shadow: 8px 8px 12px -8px #8b8b8b40, -5px -5px 15px 3px #8d8d8d9f;
+}
 
+h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

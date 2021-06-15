@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>SI DESEA INGRESAR Y VER LA MAGIA PRESIONE EL BOTON MAGICO</h2>
+    <div class="botonmagico">
+        <button id=botoninicio> BOTON MAGICO</button>
+    </div>
+    <div id="response">
+
+    </div>
+
+    <script>
+        function ajax(){
+            const http = new XMLHttpRequest();
+            const url = 'http://127.0.0.1:5501/index.html';
+
+            http.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("response").innerHTML = this.responseText
+                }
+            }
+
+            http.open("GET", url);
+            http.send();
+        }
+
+        document.getElementById("botoninicio").addEventListener("click",function(){
+            ajax();
+        })
+    </script>
+    
+</body>
+</html>

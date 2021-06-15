@@ -1,5 +1,4 @@
 /*Clase calculadora y sus metodos*/
-
 class Calculadora {
     constructor(){
         this.pi = 3,1416;
