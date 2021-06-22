@@ -127,23 +127,21 @@ footer{
     align-content: center;
 }
 
-.botonmagico button{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.datoscalculadora button{
     width: 200px;
     border-radius: 8px;
     cursor: pointer;
-    margin-left: 45%;
+    margin: 10px;
     padding: 0;
     border: 1px black solid;
-    font-size: 1.4em;
+    font-size: 2em;
     background-color: rgba(197, 197, 197, 0.904);
     box-shadow: 8px 8px 12px -8px #8b8b8b40, -5px -5px 15px 3px #8d8d8d9f;
+    position:relative;
+    right: 0;
 }
+tr{
+    text-align: center;
+    letter-spacing: normal;
 
-h2{
-    display: flex;
-    justify-content: center;
-    align-content: center;
 }
