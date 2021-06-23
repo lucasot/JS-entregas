@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +9,30 @@
     <link rel="stylesheet" href="style.css">
     <script src="/Js/pantalla.js" type="text/javascript" defer></script>
     <script src="/Js/calculadora.js" type="text/javascript" defer></script>
-    <script src="/Js/mi-archivo.js" type="text/javascript" defer></script>
+    <script src="/Js/variables.js" type="text/javascript" defer></script>
     <script src="/Js/ajax.js" type="text/javascript" defer></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="encabezado">
         <h1>BIENVENIDO A MI CALCULADORA</h1>
     </header>
-<div class="container">
-    <div class="calculadora">
-        <div class="pantalla">
-            <div id="primervalor"></div>
-            <div id="segundovalor"></div>
-        </div>
-            <button class="clear" onclick="pantalla.clear()">C</button>
+    <div class="container">
+        <div class="calculadora">
+            <div class="pantalla">
+                <div id="primervalor"></div>
+                <div id="segundovalor"></div>
+            </div>
+            <button class="operador" onclick="pantalla.clear()">C</button>
             <button class="operador" value="multiplicar">*</button>
             <button class="operador" value="dividir">/</button>
             <button class="operador" value="restar">-</button>
-            <button class="operador" value="">Prom</button>
-            <button class="operador" value="iva">IVA</button>
-            <button class="operador" value="pi">π</button> 
-            <button class="col-3 operador" value="sumar">+</button>
             <button class="num">7</button>
             <button class="num">8</button>
             <button class="num">9</button>
+            <button class="col-3 operador" value="sumar">+</button>
             <button class="num">4</button>
             <button class="num">5</button>
             <button class="num">6</button>
@@ -42,40 +42,38 @@
             <button class="col-2 operador" value="igual">=</button>
             <button class="num">0</button>
             <button class="num">.</button>
-            <button onclick="pantalla.borrar()">&larr;</button>            
-                      
+            <button onclick="pantalla.borrar()">&larr;</button>
+        </div>
     </div>
-</div>
-<div class="ocultar">
-    <button id="toggle">Ocultar Calculadora</button>
-</div>
-<div class="datoscalculadora">
-    <button onclick="ajaxjson" id="datos">Datos del Autor</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre: </th>
-                <th>Modelo Calculadora: </th>
-                <th>Fecha de Fabricacion: </th>
-            </tr>
-        </thead>
-        <tbody id="resp">
-
-        </tbody>
-    </table>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<footer class="piedepag">
+    <div class="ocultar">
+        <button id="toggle">Ocultar Calculadora</button>
+    </div>
+    <div class="datoscalculadora">
+        <button id="datos">Datos del Autor</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre: </th>
+                    <th>Modelo Calculadora: </th>
+                    <th>Fecha de Fabricacion: </th>
+                </tr>
+            </thead>
+            <tbody id="resp"></tbody>
+        </table>
+    </div>
+    <footer class="piedepag">
         <div class="contacto">
             Contacto:
         </div>
         <ul id="datoscontacto">
             <div>
-            <li class=""><p>Email:lucas.ot@live.com.ar</p></li>
-            <li class="">Telefono:+541130151510</li>
+                <li class="">
+                    <p>Email:lucas.ot@live.com.ar</p>
+                </li>
+                <li class="">Telefono:+541130151510</li>
             </div>
         </ul>
-</footer>
+    </footer>
 </body>
+
 </html>

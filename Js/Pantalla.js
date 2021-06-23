@@ -1,4 +1,3 @@
-
 /*Clase pantalla , metodos y funciones de la misma*/
 class Pantalla {
     constructor(pantallaValorAnterior, pantallaValorActual) {
@@ -12,12 +11,12 @@ class Pantalla {
             sumar: '+',
             dividir: '/',
             multiplicar: '*',
-            restar: '-', 
+            restar: '-',
         }
     }
-    /*funcion borrar ultimo valor agregado borra de 1 en 1*/
+    /*Funcion borrar ultimo valor agregado borra de 1 en 1*/
     borrar() {
-        this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.valorActual = this.valorActual.toString().slice(0, -1);
         this.imprimirValores();
     }
     /*Limpia pantalla*/
@@ -36,7 +35,7 @@ class Pantalla {
         this.imprimirValores();
     }
     agregarNumero(numero) {
-        if(numero === '.' && this.valorActual.includes('.')) return
+        if (numero === '.' && this.valorActual.includes('.')) return
         this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
@@ -50,7 +49,7 @@ class Pantalla {
         const valorAnterior = parseFloat(this.valorAnterior);
         const valorActual = parseFloat(this.valorActual);
 
-        if( isNaN(valorActual)  || isNaN(valorAnterior) ) return
+        if (isNaN(valorActual) || isNaN(valorAnterior)) return
         this.valorActual = this.calculador[this.tipoOp](valorAnterior, valorActual);
     }
 }
